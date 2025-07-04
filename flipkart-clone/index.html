@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://rukminim1.flixcart.com/fk-p-reco/1/800/200/images/Logo_Flipkart_1DB1DA.png" alt="Flipkart Logo" width="80">
+                <div class="explore-plus">
+                    <span>Explore <span class="plus">Plus</span></span>
+                    <img src="https://rukminim1.flixcart.com/fk-p-reco/1/800/200/images/Plus_4ff438.png" width="10">
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, brands and more">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="login">
+                <button>Login</button>
+            </div>
+            <div class="become-seller">Become a Seller</div>
+            <div class="more">More <i class="fas fa-chevron-down"></i></div>
+            <div class="cart"><i class="fas fa-shopping-cart"></i> Cart</div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-item"><img src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png" alt="Grocery">Grocery</div>
+            <div class="nav-item"><img src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png" alt="Mobiles">Mobiles</div>
+            <div class="nav-item"><img src="https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png" alt="Fashion">Fashion</div>
+            <div class="nav-item"><img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png" alt="Electronics">Electronics</div>
+            <div class="nav-item"><img src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg" alt="Home">Home</div>
+            <div class="nav-item"><img src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png" alt="Appliances">Appliances</div>
+            <div class="nav-item"><img src="https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png" alt="Travel">Travel</div>
+            <div class="nav-item"><img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png" alt="Toys">Toys & More</div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="slider">
+            <div class="slider-container">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <div class="slide active">
+                    <img src="images/slider/slide1.jpeg" alt="Electronics Sale">
+                </div>
+                <div class="slide">
+                    <img src="images/slider/slide 2.jpeg" alt="Fashion Deal">
+                </div>
+                <div class="slide">
+                    <img src="images/slider/slide 3.jpeg" alt="Home Appliances">
+                </div>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="deals-section">
+            <h2>Deals of the Day</h2>
+            <div class="deals-container">
+                <div class="deal-item">
+                    <img src="images/iphone.webp" alt="iPhone 13">
+                    <h3>iPhone 13</h3>
+                    <p>From ₹59,999</p>
+                    <span>Up to 10% off</span>
+                </div>
+                <div class="deal-item">
+                    <img src="images/headphones.webp" alt="Boat Headphones">
+                    <h3>Boat Headphones</h3>
+                    <p>From ₹999</p>
+                    <span>Up to 30% off</span>
+                </div>
+                <div class="deal-item">
+                    <img src="images/shoes.webp" alt="Sports Shoes">
+                    <h3>Sports Shoes</h3>
+                    <p>From ₹799</p>
+                    <span>Up to 50% off</span>
+                </div>
+                <div class="deal-item">
+                       <img src="images/mixer.webp" alt="Mixer Grinder">
+                    <h3>Mixer Grinder</h3>
+                    <p>From ₹2,499</p>
+                    <span>Up to 20% off</span>
+                </div>
+                <div class="deal-item">
+                    <img src="https://rukminim1.flixcart.com/image/200/200/kp5sya80/screen-guard/tempered-glass/o/v/n/apple-macbook-air-m1-13-3-inch-lightwings-original-imag3gh5xftgbpg3.jpeg" alt="Deal 5">
+                    <h3>Macbook Air</h3>
+                    <p>From ₹79,999</p>
+                    <span>Up to 15% off</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>ABOUT</h3>
+                <ul>
+                    <li>Contact Us</li>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Flipkart Stories</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>HELP</h3>
+                <ul>
+                    <li>Payments</li>
+                    <li>Shipping</li>
+                    <li>Cancellation & Returns</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>POLICY</h3>
+                <ul>
+                    <li>Return Policy</li>
+                    <li>Terms Of Use</li>
+                    <li>Security</li>
+                    <li>Privacy</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>SOCIAL</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2023 Flipkart Clone. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
