@@ -2,6 +2,7 @@ const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
 const searchResults = document.getElementById("search-results");
 
+// Theme toggler elements
 const themeToggler = document.getElementById("theme-toggler");
 const body = document.body;
 
@@ -20,6 +21,7 @@ async function searchWikipeida(query) {
 }
 
 function displayResults(results) {
+  // Remove the loading spinner
   searchResults.innerHTML = "";
 
   results.forEach((result) => {
@@ -65,6 +67,7 @@ searchForm.addEventListener("submit", async (e) => {
   }
 });
 
+// Event listener for the theme toggler
 themeToggler.addEventListener("click", () => {
   body.classList.toggle("dark-theme");
   if (body.classList.contains("dark-theme")) {
