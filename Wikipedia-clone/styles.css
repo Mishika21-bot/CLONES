@@ -90,6 +90,7 @@ button[type="submit"]:hover {
   height: 10rem;
 }
 
+/* Dark theme */
 .header-container {
   display: flex;
   justify-content: space-between;
