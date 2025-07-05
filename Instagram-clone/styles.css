@@ -1,0 +1,13 @@
+.instagram {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.post img {
+  width: 100%;
+}
+
+.like-btn {
+  background: none;
+  border: none;
+}
