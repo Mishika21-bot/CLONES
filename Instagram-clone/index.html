@@ -1,16 +1,82 @@
-<div class="instagram">
-  <header>
-    <h1>Instagram</h1>
-    <input type="text" placeholder="Search">
-  </header>
-  
-  <div class="stories">
-  </div>
-  
-  <div class="posts">
-    <div class="post">
-      <img src="post1.jpg">
-      <button class="like-btn">❤️ Like</button>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <i class="fas fa-search"></i>
+            </div>
+            <nav class="nav-icons">
+                <i class="fas fa-home"></i>
+                <i class="fab fa-facebook-messenger"></i>
+                <i class="fas fa-plus-square"></i>
+                <i class="fas fa-compass"></i>
+                <i class="fas fa-heart"></i>
+                <div class="profile-pic">
+                    <img src="images/downloadpp.jpeg" alt="Profile">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="stories">
+                <div class="story" onclick="viewStory('Your Story')">
+                    <div class="story-pic">
+                        <img src="images/downloadpp.jpeg" alt="Your Story">
+                        <div class="add-story">+</div>
+                    </div>
+                    <span>Your Story</span>
+                </div>
+                <div class="story" onclick="viewStory('john_doe')">
+                    <div class="story-pic">
+                        <img src="images/downloadjd.jpeg" alt="john_doe">
+                    </div>
+                    <span>john_doe</span>
+                </div>
+                <div class="story" onclick="viewStory('jane_smith')">
+                    <div class="story-pic">
+                        <img src="images/imagesjs.jpeg" alt="jane_smith">
+                    </div>
+                    <span>jane_smith</span>
+                </div>
+                <div class="story" onclick="viewStory('travel_buddy')">
+                    <div class="story-pic">
+                        <img src="images/imagestb.jpeg" alt="travel_buddy">
+                    </div>
+                    <span>travel_buddy</span>
+                </div>
+            </section>
+
+            <section class="posts" id="posts-container">
+            </section>
+        </div>
+    </main>
+
+    <div id="post-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Create New Post</h3>
+            <input type="file" id="post-image" accept="image/*">
+            <textarea id="post-caption" placeholder="Write a caption..."></textarea>
+            <button onclick="createPost()">Share</button>
+        </div>
     </div>
-  </div>
-</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
