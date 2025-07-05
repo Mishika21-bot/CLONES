@@ -1,1 +1,286 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #141414;
+            color: white;
+        }
+        
+        /* Header/Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 45px;
+            position: fixed;
+            width: 100%;
+            z-index: 10;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%);
+        }
+        
+        .logo {
+            height: 40px;
+        }
+        
+        .signin-btn {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/2b0bfda4-60d1-4e48-8e86-cdef5e13e4e2/IN-en-20240311-popsignuptwoweeks-perspective_alpha_website_large.jpg') center/cover;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        
+        /* Email Form */
+        .email-form {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .email-form input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            font-size: 1rem;
+            min-width: 300px;
+        }
+        
+        .email-form button {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Movie Sections */
+        .movie-section {
+            padding: 40px;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .movie-row {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 0 20px 20px;
+            scrollbar-width: none;
+        }
+        
+        .movie-row::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .movie-card {
+            min-width: 200px;
+            transition: transform 0.3s;
+        }
+        
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .movie-poster {
+            width: 100%;
+            border-radius: 4px;
+            aspect-ratio: 2/3;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        
+        .movie-title {
+            font-size: 1rem;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 5px;
+        }
+        
+        .movie-rating {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #999;
+        }
+        
+        .movie-rating i {
+            color: #e50914;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" class="logo">
+        <button class="signin-btn">Sign In</button>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unlimited movies, TV shows and more.</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="email-form">
+                <input type="email" placeholder="Email address">
+                <button>Get Started <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Movie Sections -->
+    <section class="movie-section">
+        <h2 class="section-title">Trending Now</h2>
+        <div class="movie-row">
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Spider-Man" class="movie-poster">
+                <div class="movie-title">Spider-Man: No Way Home</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 8.5</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/1uegR4uAxRxiMyX4nQnpzbXhrTw.jpg" alt="Venom" class="movie-poster">
+                <div class="movie-title">Moon Knight</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 7.2</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/6AdXwFTRTAzggD2QUTt5B7JFGKL.jpg" alt="Dune" class="movie-poster">
+                <div class="movie-title">Eternals</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 8.0</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg" alt="Shang-Chi" class="movie-poster">
+                <div class="movie-title">Shang-Chi and the Legend of the Ten Rings</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 7.7</div>
+            </div>
+            <div class="movie-card">
+                <img src="images/OIP.webp" alt="Inception" class="movie-poster">
+                <div class="movie-title">Kpop Demon Hunters</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 8.8</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="movie-section">
+        <h2 class="section-title">Popular on Netflix</h2>
+        <div class="movie-row">
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg" alt="Encanto" class="movie-poster">
+                <div class="movie-title">Encanto</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 7.3</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg" alt="Frozen 2" class="movie-poster">
+                <div class="movie-title">Turning Red</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 7.3</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg" alt="Avengers" class="movie-poster">
+                <div class="movie-title">Avengers: Infinity War</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 8.4</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" alt="Soul" class="movie-poster">
+                <div class="movie-title">Sonic the Hedgehog 2</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 8.1</div>
+            </div>
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/lPsD10PP4rgUGiGR4CCXA6iY0QQ.jpg" alt="Luca" class="movie-poster">
+                <div class="movie-title">Raya and the Last Dragon</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 7.9</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="movie-section">
+        <h2 class="section-title">Today's Top pick for you</h2>
+        <div class="movie-row">
+            <div class="movie-card">
+                <img src="images/OIP (1).webp" alt="Enola holmes 2" class="movie-poster">
+                <div class="movie-title">Enola holmes 2</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 6.8</div>
+            </div>
+            <div class="movie-card">
+                <img src="images/OIP (2).webp" alt="Breaking Bad" class="movie-poster">
+                <div class="movie-title">Pitch Perfect</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 8.9</div>
+            </div>
+            <div class="movie-card">
+                <img src="images/download.webp" alt="Stranger Things" class="movie-poster">
+                <div class="movie-title">Stranger Things</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 8.7</div>
+            </div>
+            <div class="movie-card">
+                <img src="images/download (1).webp" alt="The Witcher" class="movie-poster">
+                <div class="movie-title">Shadow and bone</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 8.2</div>
+            </div>
+            <div class="movie-card">
+                <img src="images/money.jpeg" alt="Money Heist" class="movie-poster">
+                <div class="movie-title">Money Heist</div>
+                <div class="movie-rating"><i class="fas fa-star"></i> 8.3</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
